@@ -8,9 +8,7 @@ sales, have a historical record of sale prices and put sales on hold.
 Requirements
 ------------
 
-This Gem has only been tested with Spree 1.0.0 and Ruby 1.9.3. It might work with other version of Spree but I'm not
-sure. It should work with Ruby 1.9.2 but I haven't verified. It does not support Ruby versions earlier than 1.9 for sure.
-If you test against other version of Spree or Ruby I'd love to hear about the results :)
+This Gem should work with Spree 2.1.0 and Ruby 2.0.
 
 Installing
 ----------
@@ -21,7 +19,7 @@ In your Gemfile add the following for the latest released version:
 
 _OR_ to work from master:
 
-    gem 'spree_sale_pricing', :git => 'git://github.com/jonathandean/spree-sale-pricing.git'
+    gem 'spree_sale_pricing', :git => 'git://github.com/Amestris/spree-sale-pricing.git'
 
 Install the Gem:
 
@@ -162,4 +160,3 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
     $ bundle exec rake test app
     $ bundle exec rspec spec
 
-Copyright (c) 2012 Jonathan Dean, released under the New BSD License
