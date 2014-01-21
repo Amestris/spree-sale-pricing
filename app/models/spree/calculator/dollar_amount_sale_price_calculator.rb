@@ -5,7 +5,7 @@ module Spree
       "Calculates the sale price for a Variant by returning the provided fixed sale price"
     end
 
-    def compute(sale_price)
+    def compute(sale_price, price)
       sale_price.value
     end
   end

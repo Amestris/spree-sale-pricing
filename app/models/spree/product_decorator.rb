@@ -34,7 +34,7 @@ Spree::Product.class_eval do
   def on_sale?
     return self.master.on_sale_in?(self.master.default_price.currency)
   end
-
+  
   private 
   
   def run_on_variants(all_variants, &block)

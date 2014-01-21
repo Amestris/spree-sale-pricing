@@ -6,6 +6,7 @@ module Spree
     accepts_nested_attributes_for :calculator
     validates :calculator, :presence => true
 
+    
    # attr_accessible :value, :start_at, :end_at, :enabled
 
     scope :active, lambda {
@@ -17,6 +18,7 @@ module Spree
     #  Rails.application.config.spree.calculators.send(self.to_s.tableize.gsub('/', '_').sub('spree_', ''))
     #end
 
+
     def calculator_type
       calculator.class.to_s if calculator
     end
@@ -27,9 +29,9 @@ module Spree
     end
 
     def price
-      calculator.compute self
+      calculator.compute self, Price.find(self.price_id)
     end
-
+    
     def enable
       update_attribute(:enabled, true)
     end
